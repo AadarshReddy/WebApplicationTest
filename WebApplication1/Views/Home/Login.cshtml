@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/_LoginLayout.cshtml";
+}
+
+<div class="row d-flex align-items-center justify-content-center mt-150 mb-150">
+    <div class="col-md-3 card p-3">
+        <h2 class="text-center text-info">Login</h2>
+        <form asp-action="Login" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class=" m-1">
+                <label asp-for="Username"></label>
+                <label class="form-label" for="form2Example18">UserName</label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class=" text-danger"></span>
+               
+            </div>
+            <div class=" m-1">
+                <label class="form-label" for="form2Example18">Password</label>
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class=" text-danger"></span>
+            </div>
+          
+            <div class="row">
+                <div class="col-8">
+                    <a asp-action="Register" class="text-decoration-none float-start mt-2 ">Don't have Account'</a>
+                </div>
+                <div class="col-4">
+                    <input type="submit" value="Login" class="btn btn-primary btn-sm float-end" />
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+
